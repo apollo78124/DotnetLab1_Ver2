@@ -17,7 +17,7 @@ namespace lab1.Controllers
 
         public FilesController(IHostingEnvironment hostingEnvironment)
         {
-            path = hostingEnvironment.WebRootPath + @"/wwwroot/TextFiles/";
+            path = hostingEnvironment.WebRootPath + @"/TextFiles/";
         }
         public IActionResult Index()
         {
