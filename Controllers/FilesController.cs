@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using lab1.Models;
 using System.Text;
+using Microsoft.AspNetCore.Hosting;
 
 namespace lab1.Controllers
 {
@@ -16,7 +17,7 @@ namespace lab1.Controllers
 
         public FilesController(IHostingEnvironment hostingEnvironment)
         {
-            path = hostingEnvironment.WebRootPath + @"./wwwroot/TextFiles";
+            path = hostingEnvironment.WebRootPath + @"/wwwroot/TextFiles";
         }
         public IActionResult Index()
         {
