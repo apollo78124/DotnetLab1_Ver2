@@ -12,8 +12,16 @@ namespace lab1.Controllers
 {
     public class FilesController : Controller
     {
+        private static string path;
+
+        public FilesController(IHostingEnvironment hostingEnvironment)
+        {
+            path = hostingEnvironment.WebRootPath + @"./wwwroot/TextFiles";
+        }
         public IActionResult Index()
         {
+            
+
             //Assuming Test is your Folder
             string[] fileName = Directory.GetFiles("./wwwroot/TextFiles/"); //Getting Text files
            // var fileList
